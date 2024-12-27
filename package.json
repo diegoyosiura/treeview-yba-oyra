@@ -7,6 +7,7 @@
   "browser": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "scripts": {
+    "test": "jest --config jest.config.ts",
     "build:commonjs": "tsc && terser dist/cjs/index.js -o dist/cjs/index.min.js --compress --mangle",
     "build:esm": "tsc --project tsconfig.esm.json && terser dist/esm/index.js -o dist/esm/index.min.js --compress --mangle",
     "build:vanilla": "rollup -c && terser dist/index.js -o dist/index.min.js --compress --mangle",
