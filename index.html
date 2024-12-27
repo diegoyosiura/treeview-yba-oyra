@@ -9,34 +9,7 @@
     <script>
         let tree = null;
         document.addEventListener('DOMContentLoaded', () => {
-            // Testando a classe YbaOyra
-            tree = new YbaOyra.YbaOyra({
-                container: document.getElementById('tree'),
-                deleteAnimationTimeout: 2000,
-            });
 
-            console.log(tree);
-
-            tree.addBranch('teste-solo', 'teste-lbl-solo', []);
-            tree.addBranch('teste-children', 'teste-lbl-children', [
-                {name: 'ch-01', label: 'ch-01', children: []},
-                {name: 'ch-02', label: 'ch-02', children: [
-                    {name: 'ch-02-01', label: 'ch-02-01', children: []},
-                    {name: 'ch-02-02', label: 'ch-02-02', children: []},
-                    {name: 'ch-02-03', label: 'ch-02-03', children: [
-                        {name: 'ch-02-03-01', label: 'ch-02-03-01', children: []},
-                        {name: 'ch-02-03-02', label: 'ch-02-03-02', children: []},
-                    ]},
-                    {name: 'ch-02-04', label: 'ch-02-04', children: []}
-                ]},
-                {name: 'ch-03', label: 'ch-03', children: []},
-                {name: 'ch-04', label: 'ch-04', children: [
-                        {name: 'ch-04-01', label: 'ch-04-01', children: []},
-                        {name: 'ch-04-02', label: 'ch-04-02', children: []},
-                    {name: 'ch-04-03', label: 'ch-04-03', children: []},
-                    {name: 'ch-04-04', label: 'ch-04-04', children: []}
-                ]}
-            ]);
         });
     </script>
 </head>

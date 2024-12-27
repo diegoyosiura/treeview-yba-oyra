@@ -135,7 +135,6 @@ export class Memoty {
         const scopedName = (parent instanceof Memoty ? `${parent.name}.${name}` : name).split('.').filter(item => { return !!item; }).join('.');
 
         if (this.branches.has(scopedName)) {
-            console.warn(`Branch with name '${scopedName}' already exists.`);
             throw new Error(`Duplicated branch with name '${scopedName}'. Branch names must be unique within their parent scope.`);
         }
 
@@ -188,7 +187,6 @@ export class Memoty {
     deleteBranch(name: string): boolean {
         try {
             if (!this.branches.has(name)) {
-                console.warn(`Branch '${name}' does not exist.`);
                 return false;
             }
 
@@ -242,7 +240,6 @@ export class Memoty {
     getBranch(name: string): Memoty | undefined {
         try {
             if (!name) {
-                console.warn("Invalid branch name provided.");
                 return undefined;
             }
 
@@ -260,7 +257,6 @@ export class Memoty {
             const firstBranch = scopedBranchName.shift()!;
 
             if (!this.branches.has(firstBranch)) {
-                console.warn(`First branch '${firstBranch}' not found.`);
                 return undefined;
             }
 
@@ -271,7 +267,6 @@ export class Memoty {
                 branch = `${branch}.${branchName}`;
                 containerBranch = containerBranch?.getBranch(branch);
                 if (!containerBranch) {
-                    console.warn(`Intermediate branch '${branch}' not found.`);
                     return undefined;
                 }
             }

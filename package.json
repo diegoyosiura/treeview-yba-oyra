@@ -13,9 +13,16 @@
     "build": "npm run build:commonjs && npm run build:esm && npm run build:vanilla"
   },
   "devDependencies": {
-    "rollup": "^4.30.0-0",
     "@rollup/plugin-node-resolve": "^16.0.0",
     "@rollup/plugin-terser": "^0.4.4",
+    "@types/jest": "^29.5.14",
+    "jest": "^29.7.0",
+    "rollup": "^4.30.0-0",
+    "ts-jest": "^29.2.5",
     "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "jest-environment-jsdom": "^29.7.0",
+    "ts-node": "^10.9.2"
   }
 }

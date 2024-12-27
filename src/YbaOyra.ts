@@ -70,6 +70,10 @@ export class YbaOyra {
         }
     }
 
+    getBranch(name: string): Memoty | undefined {
+        return this.mainBranch.getBranch(name);
+    }
+
     /**
      * Returns the main list element (UL) for the branch.
      * @returns {HTMLUListElement | undefined} The main list element.
