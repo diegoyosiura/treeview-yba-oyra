@@ -1,4 +1,4 @@
-![Build Status](https://github.com/diegoyosiura/cloud-manager/actions/workflows/ci.yml/badge.svg)
+![Build Status](https://github.com/diegoyosiura/treeview-yba-oyra/actions/workflows/ci.yml/badge.svg)
 
 # Yba-Oyra
 
