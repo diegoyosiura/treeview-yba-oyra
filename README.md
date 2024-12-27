@@ -1,3 +1,5 @@
+![Build Status](https://github.com/diegoyosiura/cloud-manager/actions/workflows/ci.yml/badge.svg)
+
 # Yba-Oyra
 
 Yba-Oyra is a versatile library designed for seamless integration in both Node.js and browser environments. It provides intuitive tools to manage hierarchical data structures, enabling flexible configurations with support for optional actions and child elements.
