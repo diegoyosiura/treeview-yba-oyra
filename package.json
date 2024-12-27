@@ -1,0 +1,21 @@
+{
+  "name": "yba-oyra",
+  "version": "1.0.0",
+  "description": "Uma biblioteca distribuída como Node.js e Vanilla JS",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "browser": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "scripts": {
+    "build:commonjs": "tsc && terser dist/cjs/index.js -o dist/cjs/index.min.js --compress --mangle",
+    "build:esm": "tsc --project tsconfig.esm.json && terser dist/esm/index.js -o dist/esm/index.min.js --compress --mangle",
+    "build:vanilla": "rollup -c && terser dist/index.js -o dist/index.min.js --compress --mangle",
+    "build": "npm run build:commonjs && npm run build:esm && npm run build:vanilla"
+  },
+  "devDependencies": {
+    "rollup": "^4.30.0-0",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "typescript": "^5.0.0"
+  }
+}

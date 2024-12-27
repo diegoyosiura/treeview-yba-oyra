@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test YbaOyra</title>
+    <script src="dist/index.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Testando a classe YbaOyra
+            const tree = new YbaOyra.YbaOyra({
+                container: document.getElementById('tree')
+            });
+
+            tree.addBranch('teste-solo', 'teste-lbl-solo', []);
+            tree.addBranch('teste-childs', 'teste-lbl-childs', [
+                {name: 'ch-01', label: 'ch-01', childs: []},
+                {name: 'ch-02', label: 'ch-02', childs: []},
+                {name: 'ch-03', label: 'ch-03', childs: []},
+                {name: 'ch-04', label: 'ch-04', childs: [
+                    {name: 'ch-04-01', label: 'ch-04-01', childs: []},
+                    {name: 'ch-04-02', label: 'ch-04-02', childs: []},
+                    {name: 'ch-04-03', label: 'ch-04-03', childs: []},
+                    {name: 'ch-04-04', label: 'ch-04-04', childs: []}
+                ]}
+            ]);
+        });
+    </script>
+</head>
+<body>
+<h1>Testando YbaOyra</h1>
+<div id="tree"></div>
+</body>
+</html>
